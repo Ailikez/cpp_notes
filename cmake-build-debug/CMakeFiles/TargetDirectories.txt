@@ -1,0 +1,3 @@
+C:/Users/13567/Desktop/cpp_notes/cmake-build-debug/CMakeFiles/inherit_or_compound_ralationship.dir
+C:/Users/13567/Desktop/cpp_notes/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/13567/Desktop/cpp_notes/cmake-build-debug/CMakeFiles/rebuild_cache.dir

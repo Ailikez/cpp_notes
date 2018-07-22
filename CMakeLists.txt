@@ -1,0 +1,15 @@
+# cmake_minimum_required(VERSION <specify CMake version here>)
+project(cpp_notes)
+
+set(CMAKE_CXX_STANDARD 11)
+
+#add_executable(this_pointer this_pointer.cpp)
+#add_executable(op_reload op_reload.cpp)
+#add_executable(op_equal_reload op_equal_reload.cpp)
+#add_executable(const_obj_quote const_obj_quote.cpp)
+#add_executable(op_reload_2friend op_reload_2friend.cpp)
+#add_executable(dynamic_int_array dynamic_int_array.cpp)
+#add_executable(shift_op_reload shift_op_reload.cpp)
+#add_executable(increment_decrement_op_reload increment_decrement_op_reload.cpp)
+#add_executable(inherit_derive inherit_derive.cpp)
+#add_executable(inherit_or_compound_ralationship inherit_or_compound_ralationship.cpp)
