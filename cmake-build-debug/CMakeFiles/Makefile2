@@ -44,10 +44,10 @@ cmake_force:
 SHELL = cmd.exe
 
 # The CMake executable.
-CMAKE_COMMAND = "C:\opt\JetBrains\CLion 2018.1.3\bin\cmake\bin\cmake.exe"
+CMAKE_COMMAND = "C:\opt\JetBrains\CLion 2018.1.6\bin\cmake\bin\cmake.exe"
 
 # The command to remove a file.
-RM = "C:\opt\JetBrains\CLion 2018.1.3\bin\cmake\bin\cmake.exe" -E remove -f
+RM = "C:\opt\JetBrains\CLion 2018.1.6\bin\cmake\bin\cmake.exe" -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
@@ -59,39 +59,39 @@ CMAKE_SOURCE_DIR = C:\Users\13567\Desktop\cpp_notes
 CMAKE_BINARY_DIR = C:\Users\13567\Desktop\cpp_notes\cmake-build-debug
 
 #=============================================================================
-# Target rules for target CMakeFiles/inherit_or_compound_ralationship.dir
+# Target rules for target CMakeFiles/STL_Outline_alg.dir
 
 # All Build rule for target.
-CMakeFiles/inherit_or_compound_ralationship.dir/all:
-	$(MAKE) -f CMakeFiles\inherit_or_compound_ralationship.dir\build.make CMakeFiles/inherit_or_compound_ralationship.dir/depend
-	$(MAKE) -f CMakeFiles\inherit_or_compound_ralationship.dir\build.make CMakeFiles/inherit_or_compound_ralationship.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\13567\Desktop\cpp_notes\cmake-build-debug\CMakeFiles --progress-num=1,2 "Built target inherit_or_compound_ralationship"
-.PHONY : CMakeFiles/inherit_or_compound_ralationship.dir/all
+CMakeFiles/STL_Outline_alg.dir/all:
+	$(MAKE) -f CMakeFiles\STL_Outline_alg.dir\build.make CMakeFiles/STL_Outline_alg.dir/depend
+	$(MAKE) -f CMakeFiles\STL_Outline_alg.dir\build.make CMakeFiles/STL_Outline_alg.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\13567\Desktop\cpp_notes\cmake-build-debug\CMakeFiles --progress-num=1,2 "Built target STL_Outline_alg"
+.PHONY : CMakeFiles/STL_Outline_alg.dir/all
 
 # Include target in all.
-all: CMakeFiles/inherit_or_compound_ralationship.dir/all
+all: CMakeFiles/STL_Outline_alg.dir/all
 
 .PHONY : all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/inherit_or_compound_ralationship.dir/rule: cmake_check_build_system
+CMakeFiles/STL_Outline_alg.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\13567\Desktop\cpp_notes\cmake-build-debug\CMakeFiles 2
-	$(MAKE) -f CMakeFiles\Makefile2 CMakeFiles/inherit_or_compound_ralationship.dir/all
+	$(MAKE) -f CMakeFiles\Makefile2 CMakeFiles/STL_Outline_alg.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\13567\Desktop\cpp_notes\cmake-build-debug\CMakeFiles 0
-.PHONY : CMakeFiles/inherit_or_compound_ralationship.dir/rule
+.PHONY : CMakeFiles/STL_Outline_alg.dir/rule
 
 # Convenience name for target.
-inherit_or_compound_ralationship: CMakeFiles/inherit_or_compound_ralationship.dir/rule
+STL_Outline_alg: CMakeFiles/STL_Outline_alg.dir/rule
 
-.PHONY : inherit_or_compound_ralationship
-
-# clean rule for target.
-CMakeFiles/inherit_or_compound_ralationship.dir/clean:
-	$(MAKE) -f CMakeFiles\inherit_or_compound_ralationship.dir\build.make CMakeFiles/inherit_or_compound_ralationship.dir/clean
-.PHONY : CMakeFiles/inherit_or_compound_ralationship.dir/clean
+.PHONY : STL_Outline_alg
 
 # clean rule for target.
-clean: CMakeFiles/inherit_or_compound_ralationship.dir/clean
+CMakeFiles/STL_Outline_alg.dir/clean:
+	$(MAKE) -f CMakeFiles\STL_Outline_alg.dir\build.make CMakeFiles/STL_Outline_alg.dir/clean
+.PHONY : CMakeFiles/STL_Outline_alg.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/STL_Outline_alg.dir/clean
 
 .PHONY : clean
 

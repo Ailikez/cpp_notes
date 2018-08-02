@@ -38,10 +38,10 @@ cmake_force:
 SHELL = cmd.exe
 
 # The CMake executable.
-CMAKE_COMMAND = "C:\opt\JetBrains\CLion 2018.1.3\bin\cmake\bin\cmake.exe"
+CMAKE_COMMAND = "C:\opt\JetBrains\CLion 2018.1.6\bin\cmake\bin\cmake.exe"
 
 # The command to remove a file.
-RM = "C:\opt\JetBrains\CLion 2018.1.3\bin\cmake\bin\cmake.exe" -E remove -f
+RM = "C:\opt\JetBrains\CLion 2018.1.6\bin\cmake\bin\cmake.exe" -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
@@ -58,7 +58,7 @@ CMAKE_BINARY_DIR = C:\Users\13567\Desktop\cpp_notes\cmake-build-debug
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	"C:\opt\JetBrains\CLion 2018.1.3\bin\cmake\bin\cmake.exe" -E echo "No interactive CMake dialog available."
+	"C:\opt\JetBrains\CLion 2018.1.6\bin\cmake\bin\cmake.exe" -E echo "No interactive CMake dialog available."
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -69,7 +69,7 @@ edit_cache/fast: edit_cache
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	"C:\opt\JetBrains\CLion 2018.1.3\bin\cmake\bin\cmake.exe" -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	"C:\opt\JetBrains\CLion 2018.1.6\bin\cmake\bin\cmake.exe" -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -110,44 +110,44 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named inherit_or_compound_ralationship
+# Target rules for targets named STL_Outline_alg
 
 # Build rule for target.
-inherit_or_compound_ralationship: cmake_check_build_system
-	$(MAKE) -f CMakeFiles\Makefile2 inherit_or_compound_ralationship
-.PHONY : inherit_or_compound_ralationship
+STL_Outline_alg: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 STL_Outline_alg
+.PHONY : STL_Outline_alg
 
 # fast build rule for target.
-inherit_or_compound_ralationship/fast:
-	$(MAKE) -f CMakeFiles\inherit_or_compound_ralationship.dir\build.make CMakeFiles/inherit_or_compound_ralationship.dir/build
-.PHONY : inherit_or_compound_ralationship/fast
+STL_Outline_alg/fast:
+	$(MAKE) -f CMakeFiles\STL_Outline_alg.dir\build.make CMakeFiles/STL_Outline_alg.dir/build
+.PHONY : STL_Outline_alg/fast
 
-inherit_or_compound_ralationship.obj: inherit_or_compound_ralationship.cpp.obj
+STL_Outline_alg.obj: STL_Outline_alg.cpp.obj
 
-.PHONY : inherit_or_compound_ralationship.obj
+.PHONY : STL_Outline_alg.obj
 
 # target to build an object file
-inherit_or_compound_ralationship.cpp.obj:
-	$(MAKE) -f CMakeFiles\inherit_or_compound_ralationship.dir\build.make CMakeFiles/inherit_or_compound_ralationship.dir/inherit_or_compound_ralationship.cpp.obj
-.PHONY : inherit_or_compound_ralationship.cpp.obj
+STL_Outline_alg.cpp.obj:
+	$(MAKE) -f CMakeFiles\STL_Outline_alg.dir\build.make CMakeFiles/STL_Outline_alg.dir/STL_Outline_alg.cpp.obj
+.PHONY : STL_Outline_alg.cpp.obj
 
-inherit_or_compound_ralationship.i: inherit_or_compound_ralationship.cpp.i
+STL_Outline_alg.i: STL_Outline_alg.cpp.i
 
-.PHONY : inherit_or_compound_ralationship.i
+.PHONY : STL_Outline_alg.i
 
 # target to preprocess a source file
-inherit_or_compound_ralationship.cpp.i:
-	$(MAKE) -f CMakeFiles\inherit_or_compound_ralationship.dir\build.make CMakeFiles/inherit_or_compound_ralationship.dir/inherit_or_compound_ralationship.cpp.i
-.PHONY : inherit_or_compound_ralationship.cpp.i
+STL_Outline_alg.cpp.i:
+	$(MAKE) -f CMakeFiles\STL_Outline_alg.dir\build.make CMakeFiles/STL_Outline_alg.dir/STL_Outline_alg.cpp.i
+.PHONY : STL_Outline_alg.cpp.i
 
-inherit_or_compound_ralationship.s: inherit_or_compound_ralationship.cpp.s
+STL_Outline_alg.s: STL_Outline_alg.cpp.s
 
-.PHONY : inherit_or_compound_ralationship.s
+.PHONY : STL_Outline_alg.s
 
 # target to generate assembly for a file
-inherit_or_compound_ralationship.cpp.s:
-	$(MAKE) -f CMakeFiles\inherit_or_compound_ralationship.dir\build.make CMakeFiles/inherit_or_compound_ralationship.dir/inherit_or_compound_ralationship.cpp.s
-.PHONY : inherit_or_compound_ralationship.cpp.s
+STL_Outline_alg.cpp.s:
+	$(MAKE) -f CMakeFiles\STL_Outline_alg.dir\build.make CMakeFiles/STL_Outline_alg.dir/STL_Outline_alg.cpp.s
+.PHONY : STL_Outline_alg.cpp.s
 
 # Help Target
 help:
@@ -155,12 +155,12 @@ help:
 	@echo ... all (the default if no target is provided)
 	@echo ... clean
 	@echo ... depend
-	@echo ... inherit_or_compound_ralationship
+	@echo ... STL_Outline_alg
 	@echo ... edit_cache
 	@echo ... rebuild_cache
-	@echo ... inherit_or_compound_ralationship.obj
-	@echo ... inherit_or_compound_ralationship.i
-	@echo ... inherit_or_compound_ralationship.s
+	@echo ... STL_Outline_alg.obj
+	@echo ... STL_Outline_alg.i
+	@echo ... STL_Outline_alg.s
 .PHONY : help
 
 
