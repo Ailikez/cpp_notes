@@ -8,7 +8,9 @@
 // #define eg_smart_pointer
 // #define eg_empty_pointer
 // #define eg_range_for_loop
-#define eg_unorderd_map
+// #define eg_unordered_map
+// #define eg_regex
+#define eg_lambda_expr
 // #define eg_rightvalue_quotation_and_move_semantics
 #ifdef eg_uniform_initialization
 /*
@@ -323,6 +325,107 @@ int main()
     return 0;
 }
 #endif
-#ifdef eg_unorderd_map
+#ifdef eg_unordered_map
+// 哈希表
+// 插入和查询的时间复杂度几乎是常数
+// 需要更多的内存空间
+#include <iostream>
+#include <string>
+#include <unordered_map>
+using namespace std;
+int main(int argc, char* argv[])
+{
+    unordered_map<string, int> turingWinner;//图灵奖获奖名单
+    turingWinner.insert(make_pair("Dijkstra", 1972));
+    turingWinner.insert(make_pair("Scott", 1976));
+    turingWinner.insert(make_pair("Wilkes", 1967));
+    turingWinner.insert(make_pair("Hamming", 1968));
+    turingWinner["Ritchie"] = 1983;
+    string name;
+    cin >> name;
+    unordered_map<string, int>::iterator p = turingWinner.find(name);
+    if(p != turingWinner.end())
+        cout << p->second;
+    else
+        cout << " Not Found " <<endl;
 
+    return 0;
+}
+#endif
+#ifdef eg_regex
+#include <iostream>
+#include <regex>
+using namespace std;
+int main(int argc, char* argv[])
+{
+    regex reg_expr("b.?p.*k");
+    cout << regex_match("bopggk", reg_expr) << endl;//输出1代表匹配成功
+    cout << regex_match("boopgggk", reg_expr) << endl;//输出0代表匹配失败
+    cout << regex_match("b pk", reg_expr) << endl;//输出1代表匹配成功
+    regex reg_expr2("\\d{3}([a-zA-Z]+).(\\d{2}|N/A)\\s\\1");
+    string correct = "123Hello N/A Hello";
+    string incorrect = "123Hello 12 hello";
+    cout << regex_match(correct, reg_expr2) << endl;//1
+    cout << regex_match(incorrect, reg_expr2) << endl;//0
+
+    return 0;
+}
+#endif
+#ifdef eg_lambda_expr
+// 只使用一次的函数对象，能否不要为其专门写一个类？
+// 只调用一次的简单函数，能否在其调用时才写出其函数体？
+/*
+ * 形式：
+ *      [外部变量访问方式说明符](参数表) -> 返回值类型
+ *      { 语句组 }
+ *  - [=]   以传值的形式使用所有外部变量
+ *  - []    不使用任何外部变量
+ *  - [&]   以引用的形式使用所有的外部变量
+ *  - [x, &y]       x以传值形式使用，y以引用形式使用
+ *  - [=, &x, &y]   x,y以引用形式使用, 其它传值
+ *  - [&, x, y]     x,y以传值方式使用，其他引用
+ * 注："->返回值类型"可有可无，没有编译器会自动判断返回值类型
+ */
+#include <iostream>
+#include <algorithm>
+#include <vector>
+#include <functional>
+using namespace std;
+int main()
+{
+    int x = 100, y = 200, z = 300;
+    cout << [](double a, double b)
+    { return a + b; }(1.2, 2.5) << endl;
+    auto ff = [=, &y, &z](int n)
+    {
+        cout << x << endl;
+        y++;
+        z++;
+        return n * n;
+    };
+    cout << ff(15) << endl;
+    cout << y << "," << z << endl;
+    cout << "**********" << endl;
+    int a[4]{4, 2, 11, 33};
+    sort(a, a + 4, [](int x, int y) -> bool
+    { return x % 10 < y % 10; });
+    for_each(a, a + 4, [](int x)
+    { cout << x << " "; });
+    cout << endl << "**********" << endl;
+    vector<int> aa{1, 2, 3, 4};
+    int total = 0;
+    for_each(aa.begin(), aa.end(), [&](int &x)
+    {
+        total += x;
+        x *= 2;
+    });
+    cout << total << endl;// 10
+    for_each(aa.begin(), aa.end(), [](int x)
+    { cout << x << ","; });
+    cout << endl << "lambda recursion" << endl;
+    function<int(int)>/*表示返回值为int,形参为int*/  fib = [&fib](int n)
+    { return n <= 2 ? 1 : fib(n - 1) + fib(n - 2); };
+    cout << fib(5) << endl;
+    return 0;
+}
 #endif
