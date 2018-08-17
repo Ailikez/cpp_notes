@@ -1,0 +1,12 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/13567/Documents/workshop/notes/cpp_tech_notes/algorithm-fundamental-tutorial/enumeration.cpp
+stdio.h
+-
+
