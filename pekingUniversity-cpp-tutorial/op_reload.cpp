@@ -24,7 +24,7 @@ public:
     double real;
     double imag;
     //重载运算符为成员函数
-    Complex operator-(const Complex &tmp) // a+b,看成是 a.operator-(b), 所以只有一个参数
+    Complex operator-(const Complex &tmp) // a-b,看成是 a.operator-(b), 所以只有一个参数
     {
         return Complex(real - tmp.real, imag - tmp.imag);
     }
