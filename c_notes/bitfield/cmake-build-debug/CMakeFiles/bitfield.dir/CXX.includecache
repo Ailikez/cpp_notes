@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/13567/Documents/workshop/notes/cpp_tech_notes/c_notes/bitfield/main.cpp
+vector
+-
+iostream
+-
+algorithm
+-
+
